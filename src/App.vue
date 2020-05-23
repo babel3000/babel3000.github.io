@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header-content></header-content>
-    <transition>
+    <transition name='fade' mode='out-in'>
       <router-view></router-view>
     </transition>
     <footer-content></footer-content>
@@ -12,7 +12,7 @@
 
 import HeaderContent from './components/HeaderContent'
 import FooterContent from './components/FooterContent'
-import './assets/style/main.scss'
+
 
 export default {
   name: "App",

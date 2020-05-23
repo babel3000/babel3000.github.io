@@ -1,11 +1,15 @@
 <template>
 <b-container>
-    <b-row>
+    <b-row align-v="center">
         <b-col>
             <img :src='logo'>
         </b-col>
         <b-col cols='10'>
+            <b-row align-h="end">
+                <b-col>
             <navigation :items='menuItems'></navigation>
+            </b-col>
+            </b-row>
         </b-col>
     </b-row>
 </b-container>

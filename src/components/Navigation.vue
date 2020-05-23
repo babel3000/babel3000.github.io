@@ -1,5 +1,5 @@
 <template>
-    <b-nav>
+    <b-nav align='right'>
         <b-nav-item v-for='(item, i) in items' :key='i' :to='item.link'>
             {{ item.label }}
         </b-nav-item>
