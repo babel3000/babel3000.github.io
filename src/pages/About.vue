@@ -2,10 +2,10 @@
   <div class="about-container">
     <b-container>
       <b-row align-v="center" class='mb-4'>
-        <b-col>
+        <b-col xs='12' lg='6'>
           <img src="../assets/img/andre.png" />
         </b-col>
-        <b-col>
+        <b-col xs='12' lg='6'>
           <h2>André Costa</h2>
           <p>Chef</p>
           <p>
@@ -20,7 +20,7 @@
         </b-col>
       </b-row>
       <b-row align-v="center">
-        <b-col>
+        <b-col xs='12' lg='6'>
           <h2>Rui Filipe</h2>
           <p>Chef</p>
           <p>Rui Filipe formou-se na Escola de Hotelaria e Turismo de Viana do Castelo, mas o seu interesse e curiosidade pela cozinha começaram desde cedo, tendo trabalhado como cozinheiro em alguns restaurantes antes de iniciar a formação. O seu estágio na área foi realizado no 'The Yeatman' (2*Michelin).</p>
@@ -28,7 +28,7 @@
           <p>E como o sonho comanda a vida, em 2018 alcançou um que tinha a nível profissional: trabalhar no restaurante 'Fortaleza do Guincho' (1*Michelin) onde teve o privilégio de conhecer o Chef Miguel Rocha Vieira, tendo-se este tornando na sua principal referência e mestre. Uma nova aventura surgiu quando o Chef Miguel Rocha Vieira o levou além pátria. Um projeto na Hungria, mais precisamente em Budapeste, onde trabalhou no restaurante 'Costes' (1*Michelin).</p>
           <p>Na hora de regressar a casa, não hesitou em aceitar o convite do André Costa para que juntos possam dar continuidade e uma nova vida à Cozinha Angelina.</p>
         </b-col>
-        <b-col>
+        <b-col xs='12' lg='6'>
           <img src="../assets/img/rui.png" />
         </b-col>
       </b-row>

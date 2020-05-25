@@ -4,16 +4,14 @@ body {
     color: #fff;
     background: url(./../img/slate.jpg);
     min-height: 100vh;
-    padding-top: 20px;
     line-height: 1.4;
 }
 
 body::-webkit-scrollbar {
     display: none;
-  }
+}
 
-
-img{
+img {
     max-width: 100%;
 }
 
@@ -21,14 +19,87 @@ a.nav-link {
     color: #fbc477;
     font-family: 'Bilbo', cursive;
     font-size: 2em;
+    text-transform: lowercase;
+    position: relative;
 }
 
-.btn-secondary{
-    background:none;
-    color:#fbc477;
-    border-radius:0;
+a.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #fbc477;
+    top: 50%;
+    opacity: 0;
+    transform: translateY(-50%);
+    left: 0;
+    transition: .6s all;
+}
+
+a.nav-link:hover:after {
+    width: 100%;
+    opacity: 1;
+}
+
+.btn-secondary {
+    background: none;
+    color: #fbc477;
+    border-radius: 0;
     font-weight: 700;
-    border: 3px solid #fbc477
+    border: 2px solid #fbc477
+}
+
+.social,
+.contacts {
+    margin: 20px 0;
+}
+
+.social img,
+.contacts img {
+    width: 22px;
+    opacity: .6;
+    transition: .5s all;
+    margin-right: 10px;
+}
+
+.social a:hover img,
+.contacts a:hover img {
+    opacity: 1;
+}
+
+a {
+    color: #fbc477;
+    transition: .5s all;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff
+}
+
+.contacts a {
+    display: block
+}
+
+.social a,
+.contacts a {
+    margin-bottom: 3px
+}
+
+.btn-secondary:hover {
+    background: #fbc477;
+    color: #fff;
+    border-color: #fbc477;
+}
+
+.menu-container ul {
+    list-style: none;
+}
+
+.menu-container li,
+p {
+    letter-spacing: 1px;
+    font-size: 1.2em;
 }
 
 h1,
@@ -36,21 +107,39 @@ h2,
 h3 {
     color: #fbc477;
     font-family: 'Bilbo', cursive;
-    font-weight: 700;
-    margin:0;
+    margin: 0;
 }
 
-h2{
-    font-size:4.5em;
+h2 {
+    font-size: 4.5em;
+    font-weight: 700;
     letter-spacing: 3px;
     margin-bottom: 20px;
 }
 
-h2 + p {
-    font-size:2.5em;
+h3 {
+    font-size: 3em;
+}
+
+h4 {}
+
+main {
+    min-height: 70vh;
+}
+
+h2+p {
+    font-size: 2.5em;
     font-weight: 700;
     line-height: 1;
-    margin-bottom:40px;
+    margin-bottom: 40px;
+}
+
+footer {
+    background: rgba(0, 0, 0, .4);
+    min-height: 100px;
+    padding: 20px 20px 5px;
+    font-size: .8em;
+    margin-top: 30px;
 }
 
 .flour {
@@ -60,11 +149,125 @@ h2 + p {
     width: 200px;
 }
 
-.fade-enter, .fade-leave-to{
-    opacity:0;
-    transform:translateX(-100px)
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+    transform: translateX(-100px)
 }
 
-.fade-enter-active, .fade-leave-active{
-    transition:.8s all;
+.fade-enter-active,
+.fade-leave-active {
+    transition: .8s all;
+}
+
+.menu-text {
+    position: relative;
+    top: 10px;
+    left: 1px;
+    transition: .5s all;
+}
+
+ul {
+    padding-left: 0;
+}
+
+.move {
+    top: 20px;
+}
+
+.menu.rotate {
+    transform: rotate(45deg);
+    transition: .5s all;
+}
+
+.menu-square {
+    background: #fbc477;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    transition: .5s all;
+}
+
+.menu {
+    transition: .5s all;
+    transform: rotate(0);
+    z-index: 20;
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    right: 20px;
+    top: 40px;
+}
+
+.menu:after {
+    content: "MENU";
+    color: #fff;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: none;
+}
+
+.top {
+    top: 0;
+    left: 0;
+}
+
+.left {
+    bottom: 0;
+    left: 0;
+}
+
+.bottom {
+    bottom: 0;
+    right: 0;
+}
+
+.right {
+    top: 0;
+    right: 0;
+}
+
+#mobileMenu {
+    opacity: 0;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: .6s all;
+    background: rgba(0, 0, 0, .9)
+}
+
+#mobileMenu.show {
+    z-index: 7;
+    opacity: 1;
+}
+
+.mobile-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mobile-container .nav {
+    display: block;
+    text-align: center;
+}
+
+@media (max-width:991px) {
+    .logo {
+        max-width: 200px;
+        margin: auto
+    }
+    h2 {
+        font-size: 2.5em;
+    }
+    h2+p {
+        font-size: 1.8em;
+    }
 }

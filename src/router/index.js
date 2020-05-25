@@ -4,6 +4,7 @@ import About from '@/pages/About'
 import Home from '@/pages/Home'
 import Products from '@/pages/Products'
 import Lab from '@/pages/Lab'
+import Menu from '@/pages/Menu'
 import NewsList from '@/pages/NewsList'
 import News from '@/pages/News'
 import BookTable from '@/pages/BookTable'
@@ -33,6 +34,11 @@ export default new Router({
             component: Lab
         },
         {
+            path: '/menu/',
+            name: 'Menu',
+            component: Menu
+        },
+        {
             path: '/noticias/',
             name: 'NewsList',
             component: NewsList
@@ -43,7 +49,7 @@ export default new Router({
             component: News
         },
         {
-            path: '/book/',
+            path: '/marcar-mesa/',
             name: 'BookTable',
             component: BookTable
         }

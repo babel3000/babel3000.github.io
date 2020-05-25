@@ -1,13 +1,28 @@
 <template>
 <b-container>
+    <div @click="menuToggle" id='menu' class="menu">
+		<div class="menu-square top">
+		</div>
+		<div class="menu-square left">
+		</div>
+		<div class="menu-square bottom">
+		</div>
+		<div class="menu-square right">
+		</div>
+	</div>
+    <div id='mobileMenu'>
+        <div class='mobile-container'>
+            <navigation mobile='true' :items='menuItems'></navigation>
+        </div>
+    </div>
     <b-row align-v="center">
-        <b-col>
-            <img :src='logo'>
+        <b-col class='text-center' xs='12' lg='2'>
+            <img class='logo' :src='logo'>
         </b-col>
-        <b-col cols='10'>
+        <b-col xs='12' lg='10'>
             <b-row align-h="end">
                 <b-col>
-            <navigation :items='menuItems'></navigation>
+            <navigation mobile='false' class='d-none d-lg-flex' :items='menuItems'></navigation>
             </b-col>
             </b-row>
         </b-col>
@@ -32,23 +47,29 @@ export default {
                     label: 'Sobre Nós',
                     link:'/sobre-nos'
                 },
+                //{
+                //    label: 'Produtos Locais',
+                //    link:'/produtos-locais'
+//},
                 {
-                    label: 'Produtos Locais',
-                    link:'/produtos-locais'
+                    label: 'Menu',
+                    link:'/menu'
                 },
-                {
-                    label: 'Laboratório',
-                    link:'/laboratorio'
-                },
-                {
-                    label: 'Notícias',
-                    link:'/noticias'
-                },
+                //{
+                //    label: 'Notícias',
+                //    link:'/noticias'
+                //},
                 {
                     label: 'Marcar Mesa',
                     link:'/marcar-mesa'
                 }
             ]
+        }
+    },
+    methods: {
+        menuToggle(){
+            document.getElementById('menu').classList.toggle('rotate');
+            document.getElementById('mobileMenu').classList.toggle('show');
         }
     }
 }
