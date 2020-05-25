@@ -1,6 +1,6 @@
 <template>
 <b-container>
-    <div @click="menuToggle" id='menu' class="menu">
+    <div class='d-lg-none menu' @click="menuToggle" id='menu'>
 		<div class="menu-square top">
 		</div>
 		<div class="menu-square left">
@@ -12,7 +12,7 @@
 	</div>
     <div id='mobileMenu'>
         <div class='mobile-container'>
-            <navigation mobile='true' :items='menuItems'></navigation>
+            <navigation :mobile='true' :items='menuItems'></navigation>
         </div>
     </div>
     <b-row align-v="center">
@@ -22,7 +22,7 @@
         <b-col xs='12' lg='10'>
             <b-row align-h="end">
                 <b-col>
-            <navigation mobile='false' class='d-none d-lg-flex' :items='menuItems'></navigation>
+                    <navigation :mobile='false' class='justify-content-end d-none d-lg-flex' :items='menuItems'></navigation>
             </b-col>
             </b-row>
         </b-col>

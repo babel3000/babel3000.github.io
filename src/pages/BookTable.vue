@@ -6,7 +6,7 @@
           <h2>Contactos</h2>
           <p>Reserve Connosco</p>
           <p>Aceitamos reservas de pequenas grupos ou festas privadas.</p>
-          <p>Para mais informações, ou também para nos deixar uma mensagem ou critíca, contácte-nos pelos meios embaixo.</p>
+          <p>Para mais informações, ou também para nos deixar uma mensagem ou critíca, contacte-nos pelos meios embaixo.</p>
           <div class="contacts">
             <a href="tel:926599888" target="_blank">
               <img src="../assets/img/phone.svg" />926 599 888

@@ -4,7 +4,7 @@
             {{ item.label }}
         </b-nav-item>
     </b-nav>
-    <b-nav v-else align='right'>
+    <b-nav  v-else align='right'>
         <b-nav-item v-for='(item, i) in items' :key='i' :to='item.link'>
             {{ item.label }}
         </b-nav-item>
